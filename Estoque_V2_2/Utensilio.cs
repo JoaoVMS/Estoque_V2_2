@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Estoque_V2_2
 {
-    class Comida : Produto
+    class Utensilio : Produto
     {
-        public Comida(int codigo_Produto, string nome_Produto, double margem_Lucro, double preco_Custo, int estoque_Incial, int minimo_Estoque)
+        public Utensilio(int codigo_Produto, string nome_Produto, double margem_Lucro, double preco_Custo, int estoque_Incial, int minimo_Estoque)
             : base(codigo_Produto, nome_Produto, margem_Lucro, preco_Custo, estoque_Incial, minimo_Estoque)
         {
-            Imposto = 0.25;
+            Imposto = 0.6;
         }
         public override string ToString()
         {
-            return string.Format("Cód.: {0}; Nome: {1}; Categoria: Comida; Margem de Lucro: {2}%; " +
+            return string.Format("Cód.: {0}; Nome: {1}; Categoria: Utensilio; Margem de Lucro: {2}%; " +
                 "\nPreço de Custo: {3}; Estoque Inicial: {4}; Minimo Estoque: {5}",
                 Cod_Produto, Nome_Produto, Margem_Lucro, Preco_Custo, Estoque_Inicial, Minimo_Estoque);
         }

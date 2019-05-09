@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Estoque_V2_2
 {
-    class Pedido : IDado
+    class Vendas : IDado
     {
         public int Cod_Pedido { get; set; }
-        public int Qtd_Produtos { get; set; }
-        public Pedido(int Cod_Pedido, int Qtd_Produtos)
+        public int Cod_Produto { get; set; }
+        public int Qtd_Vendida { get; set; }
+
+        public Vendas(int Cod_Pedido, int Cod_Produto, int Qtd_Vendida)
         {
             this.Cod_Pedido = Cod_Pedido;
-            this.Qtd_Produtos = Qtd_Produtos;
-        }
-        public override string ToString()
-        {
-            return "Pedido: " + Cod_Pedido + " Qtd_Produtos: " + Qtd_Produtos;
+            this.Cod_Produto = Cod_Produto;
+            this.Qtd_Vendida = Qtd_Vendida;
         }
         public int CompareTo(object obj)
         {
-            Pedido aux = (Pedido)(obj);
+            Vendas aux = (Vendas)(obj);
 
             if (Cod_Pedido < aux.Cod_Pedido)
                 return -1;
@@ -29,6 +28,10 @@ namespace Estoque_V2_2
                 return 1;
             else
                 return 0;
+        }
+        public override string ToString()
+        {
+            return "Cod_Pedido: " + Cod_Pedido + "; Cod_Produto: " + Cod_Produto + "; Qtd_Vendida: " + Qtd_Vendida; 
         }
         public void Inserir(IDado val) { }
     }
