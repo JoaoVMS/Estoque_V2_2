@@ -15,7 +15,7 @@ namespace Estoque_V2_2
         public int Estoque_Inicial { get; set; }
         public int Minimo_Estoque { get; set; }
         public double Imposto { get; set; }
-        public Fila Fila_de_Pedidos { get; set; }
+        public Fila Fila_de_Pedidos { get; set; } // Fila de vendas?
 
         public Produto(int Cod_Produto, string Nome_Produto, double Margem_Lucro, double Preco_Custo, int Estoque_Inicial, int Minimo_Estoque)
         {

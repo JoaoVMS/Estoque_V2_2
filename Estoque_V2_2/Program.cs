@@ -91,7 +91,7 @@ namespace Estoque_V2_2
         }
         static void Ler_Dados_ARQ3()
         {
-            string nome_Arquivo = "abc2.txt";
+            string nome_Arquivo = "abc3.txt";
             IDado novo;
             string pedido;
 
@@ -110,7 +110,7 @@ namespace Estoque_V2_2
                         while(info[0] == pedido)
                         {
                             novo = new Vendas(Convert.ToInt32(info[0]), Convert.ToInt32(info[1]), Convert.ToInt32(info[2]));
-                            Arvore_de_Produtos.Buscar(novo);
+                            Arvore_de_Produtos.Inserir(novo);
                         }
                     }
                 }

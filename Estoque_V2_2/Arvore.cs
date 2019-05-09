@@ -20,18 +20,12 @@ namespace Estoque_V2_2
             Nodo aux = new Nodo(dado);
             this.Raiz = InserirRecursivo(aux, Raiz);
         }
-
         public IDado Buscar(IDado dado)
         {
             //IDado dado = new Numero(chave); // = new (Tipo da classe) (chave);
             Nodo busca = new Nodo(dado);
 
             return BuscaRecursiva(busca, Raiz).meuDado;
-        }
-        public void Adicionar_Pedido_em_Produto(IDado produto, IDado pedido)
-        {
-            Nodo busca = new Nodo(produto);
-            BuscaRecursiva_Insercao(busca, Raiz, pedido);
         }
         public IDado Retirar(IDado dado)
         {
@@ -82,7 +76,6 @@ namespace Estoque_V2_2
             }
             return onde;
         }
-
         private Nodo InserirRecursivo(Nodo novo, Nodo raiz)
         {
             if (raiz == null) //quando encontra uma raiz nula, vc insere novo
@@ -90,12 +83,16 @@ namespace Estoque_V2_2
 
             if (novo.meuDado.CompareTo(raiz.meuDado) < 0) //procura uma raiz nula na esquerda
                 raiz.esquerda = InserirRecursivo(novo, raiz.esquerda);
+            else if (novo.meuDado.CompareTo(raiz.meuDado) == 0) // adiciona uma venda a fila do produto
+            {
+                IDado venda = novo.meuDado;
+                raiz.meuDado.Inserir(venda);
+            }
             else
                 raiz.direita = InserirRecursivo(novo, raiz.direita); //procura uma raiz nula na direita
 
             return raiz;
-        }
-
+        }        
         private Nodo BuscaRecursiva(Nodo busca, Nodo raiz)
         {
             if (raiz == null)
@@ -109,24 +106,7 @@ namespace Estoque_V2_2
                 return BuscaRecursiva(busca, raiz.esquerda);
             else
                 return BuscaRecursiva(busca, raiz.direita);
-        }
-        private Nodo BuscaRecursiva_Insercao(Nodo busca, Nodo raiz, IDado pedido)
-        {
-            if (raiz == null)
-                return null;
-
-            if (busca.meuDado.CompareTo(raiz) == 0)
-            {
-                raiz.meuDado.Inserir(pedido);
-                return raiz;
-            }
-
-            else if (busca.meuDado.CompareTo(raiz) < 0)
-                return BuscaRecursiva(busca, raiz.esquerda);
-            else
-                return BuscaRecursiva(busca, raiz.direita);
-        }
-
+        }        
         private string EmOrdem(Nodo raiz)
         {
             if (raiz != null)
