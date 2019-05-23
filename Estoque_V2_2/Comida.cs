@@ -19,5 +19,9 @@ namespace Estoque_V2_2
                 "\nPreço de Custo: {3}; Estoque Inicial: {4}; Minimo Estoque: {5}",
                 Cod_Produto, Nome_Produto, Margem_Lucro, Preco_Custo, Estoque_Inicial, Minimo_Estoque);
         }
+        public override int GetHashCode()
+        {
+            return 1;
+        }
     }
 }

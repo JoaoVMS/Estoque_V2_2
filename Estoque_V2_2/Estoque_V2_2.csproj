@@ -49,7 +49,7 @@
     <Compile Include="Elemento.cs" />
     <Compile Include="Fila.cs" />
     <Compile Include="IDado.cs" />
-    <Compile Include="Material_Escritorio.cs" />
+    <Compile Include="Escritorio.cs" />
     <Compile Include="Nodo.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Produto.cs" />

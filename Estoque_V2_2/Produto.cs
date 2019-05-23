@@ -63,5 +63,9 @@ namespace Estoque_V2_2
 
             return auxString.ToString();
         }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

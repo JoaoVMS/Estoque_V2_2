@@ -48,7 +48,7 @@ namespace Estoque_V2_2
                                 Arvore_de_Produtos.Inserir(novo);
                                 break;
                             case "3":
-                                novo = new Material_Escritorio(Convert.ToInt32(info[0]), info[1], Convert.ToDouble(info[3]),
+                                novo = new Escritorio(Convert.ToInt32(info[0]), info[1], Convert.ToDouble(info[3]),
                                     Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
                                 Fila_Produtos[2].Inserir(novo);
                                 Arvore_de_Produtos.Inserir(novo);
