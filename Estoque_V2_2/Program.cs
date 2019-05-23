@@ -21,8 +21,7 @@ namespace Estoque_V2_2
         static void Ler_Dados_ARQ1()
         {
             string nome_Arquivo = "abc1.txt";
-            IDado novo = null;
-            bool erro = false;
+            IDado novo = null;            
 
             if (!File.Exists(nome_Arquivo))
                 Console.WriteLine("Arquivo {0} não existe!", nome_Arquivo);
@@ -40,30 +39,29 @@ namespace Estoque_V2_2
                                 novo = new Bebida(Convert.ToInt32(info[0]), info[1], Convert.ToDouble(info[3]), 
                                     Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
                                 Fila_Produtos[0].Inserir(novo);
+                                Arvore_de_Produtos.Inserir(novo);
                                 break;
                             case "2":
                                 novo = new Comida(Convert.ToInt32(info[0]), info[1], Convert.ToDouble(info[3]),
                                     Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
                                 Fila_Produtos[1].Inserir(novo);
+                                Arvore_de_Produtos.Inserir(novo);
                                 break;
                             case "3":
                                 novo = new Material_Escritorio(Convert.ToInt32(info[0]), info[1], Convert.ToDouble(info[3]),
                                     Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
                                 Fila_Produtos[2].Inserir(novo);
+                                Arvore_de_Produtos.Inserir(novo);
                                 break;
                             case "4":
                                 novo = new Utensilio(Convert.ToInt32(info[0]), info[1], Convert.ToDouble(info[3]),
                                     Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
                                 Fila_Produtos[3].Inserir(novo);
+                                Arvore_de_Produtos.Inserir(novo);
                                 break;
-                            default: erro = true;
+                            default:
                                 break;
                         }
-
-                        if (!erro)
-                            Arvore_de_Produtos.Inserir(novo);
-
-                        erro = false;
                     }
                 }
             }
