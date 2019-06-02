@@ -87,7 +87,144 @@ namespace Estoque_V2_2
                 raiz.direita = InserirRecursivo(novo, raiz.direita); //procura uma raiz nula na direita
 
             return raiz;
-        }        
+        }
+
+        #region Valor Liquido e Bruto, Faturamento total e Produto de maior Faturamento
+
+        /// <summary>
+        /// Relatório contendo as seguintes informações: Valor liquido, valor bruto, produto de maior faturamento e faturamento total
+        /// </summary>
+        /// <returns></returns>
+        public string Relartorio()
+        {
+            var lines = new StringBuilder();
+            string result;
+            try
+            {
+                lines.Append("Valor bruto: " + _valorBruto(Raiz, 0));
+                lines.Append("\nValor liquido: " + _valorLiquido(Raiz, 0));
+                lines.Append("\nProduto de maior faturamento: " + _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado).ToString());
+                lines.Append("\nFaturamento total: " + _faturamentoTotal(Raiz, 0));
+                result = lines.ToString();
+            }
+            catch (Exception e)
+            {
+                result = (e.Message);
+            }
+
+            return result;
+        }
+
+        #region Getters
+        public double ValorBruto
+        {
+            get { return _valorBruto(Raiz, 0); }
+        }
+        public double ValorLiquido
+        {
+            get { return _valorLiquido(Raiz, 0); }
+        }
+        public double FaturamentoTotal
+        {
+            get { return _faturamentoTotal(Raiz, 0); }
+        }
+        public Produto Produto_De_Maior_Faturmento
+        {
+            get { return _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado); }
+        }
+        #endregion
+
+        #region Métodos Recursivos
+        /// <summary>
+        /// Método recursivo para encontrar na árvore o produto de maior faturamento
+        /// </summary>
+        /// <param name="root">Raiz da árvore</param>
+        /// <param name="produto">Produto auxiliar</param>
+        /// <returns>produto de maior faturamento</returns>
+        private Produto _produtoMaiorFat(Nodo root, Produto produto)
+        {
+            if (root == null)
+            {
+                return null;
+            }
+
+            var aux = (Produto)(root.meuDado);
+
+            if (aux.FaturamentoBruto() > produto.FaturamentoBruto())
+                produto = aux;
+
+            _produtoMaiorFat(root.esquerda, produto);
+            _produtoMaiorFat(root.direita, produto);
+
+            return produto;
+        }
+        /// <summary>
+        /// Método recursivo para determinar o valor liquido total dos produtos
+        /// </summary>
+        /// <param name="root">Raiz da árvore</param>
+        /// <param name="liquido">parametro auxiliar, use o valor 0</param>
+        /// <returns>valor liquido total dos produtos</returns>
+        private double _valorLiquido(Nodo root, double liquido)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            var aux = (Produto)root.meuDado;
+            liquido += (aux.Preco_Custo + aux.LucroLiquido());
+
+            liquido += _valorLiquido(root.esquerda, liquido);
+            liquido += _valorLiquido(root.direita, liquido);
+
+            return liquido;
+        }
+        /// <summary>
+        /// Método recursivo para determinar o valor bruto total dos produtos
+        /// </summary>
+        /// <param name="root">Raiz da árvore</param>
+        /// <param name="bruto">parametro auxiliar, use o valor 0</param>
+        /// <returns>valor bruto total dos produtos</returns>
+        private double _valorBruto(Nodo root, double bruto)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            var aux = (Produto)root.meuDado;
+            bruto += (aux.Preco_Custo + aux.LucroLiquido() + aux.Imposto);
+
+            bruto += _valorBruto(root.esquerda, bruto);
+            bruto += _valorBruto(root.direita, bruto);
+
+            return bruto;
+        }
+        /// <summary>
+        /// Método recursivo para determinar o faturamento total
+        /// </summary>
+        /// <param name="root">Raiz da árvore</param>
+        /// <param name="value">parametro auxiliar, use o valor 0</param>
+        /// <returns>faturamento total</returns>
+        private double _faturamentoTotal(Nodo root, double value)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            var aux = (Produto)root.meuDado;
+            value += (aux.FaturamentoBruto());
+
+            value += _faturamentoTotal(root.esquerda, value);
+            value += _faturamentoTotal(root.direita, value);
+
+            return value;
+        }
+        #endregion
+
+        #endregion
+
         private Nodo BuscaRecursiva(Nodo busca, Nodo raiz)
         {
             if (raiz == null)
