@@ -18,15 +18,12 @@ namespace Estoque_V2_2
             Lista_Produtos = new Lista[4]; // [0] Bebida, [1] Comida, [2] Escritorio, [3] Utensilios]
             Arvore_de_Produtos = new Arvore();
             Ler_Dados_ARQ1();
-            
-            
-
 
             Console.ReadKey();
         }
         static void Ler_Dados_ARQ1()
         {
-            string nome_Arquivo = "abc1.txt";
+            string nome_Arquivo = "AEDprodutos.txt";
             IDado novo = null;            
 
             if (!File.Exists(nome_Arquivo))
@@ -75,9 +72,66 @@ namespace Estoque_V2_2
                 }
             }
         }
+        static void Ler_Dados_Vendas()
+        {
+            string nome_Arquivo = "AEDvendas.txt";
+
+            //Verificar se arquivo existe
+            if (!File.Exists(nome_Arquivo))
+            {
+                Console.WriteLine("Falha ao ler vendas porque o arquivo {0} não existe!", nome_Arquivo);
+                return;
+            }
+
+            //fazer a leitura do arquivo
+            StreamReader leituraVendas = new StreamReader(nome_Arquivo);
+
+            //Leitura do arquivo
+            while(!leituraVendas.EndOfStream)
+            {
+                //leitura do codigo e do numero de produtos
+                string[] info = leituraVendas.ReadLine().Split(';');
+                if (info.Length == 2)
+                {
+                    //info[0] -> codigo venda
+                    int codigoVenda = Convert.ToInt32(info[0]);
+                    //info[1] -> numero de itens
+                    int quantidade_Itens = Convert.ToInt32(info[1]);
+
+                    for(int pos = 0; pos < quantidade_Itens; pos++)
+                    {
+                        //leitura itens
+                        info = leituraVendas.ReadLine().Split(';');
+                        if (info.Length == 2)
+                        {
+                            //info[0] -> nome do produto
+                            string nomeProduto = info[0];
+                            //info[1] -> quantidade do produto vendido
+                            int quantidadeVendida = Convert.ToInt32(info[1]);
+
+                            //Criando objeto venda
+                            Vendas vendas = new Vendas(codigoVenda, nomeProduto, quantidadeVendida);
+
+                            //Buscando produto
+                            Produto produto_procurado = new Produto(nomeProduto, 0, 0, 0, 0);
+                            produto_procurado = (Produto)(Arvore_de_Produtos.Buscar(produto_procurado));
+
+                            //Inserindo produto
+                            if (produto_procurado != null)  //verifica se produto existeS
+                                produto_procurado.Lista_de_Pedidos.Inserir(vendas);
+                            else
+                                Console.WriteLine("Produto não foi encontrado.S");
+                        }
+                    }
+                }
+            }
+
+            leituraVendas.Close();
+        }
+
         static void Ler_Dados_ARQ2()
         {
-            string nome_Arquivo = "abc2.txt";
+            string nome_Arquivo = "AEDvendas.txt";
             IDado novo;
 
             if (!File.Exists(nome_Arquivo))
@@ -152,6 +206,19 @@ namespace Estoque_V2_2
             }
             int lugar = aux.GetHashCode();
             Lista_Produtos[lugar].ToString();
+        }
+
+
+        static string mostrar_pedidos_produto(string nomeProduto)
+        {
+            //Fazendo busca
+            Produto produtoProcurado = (Produto)(Arvore_de_Produtos.Buscar(new Produto(nomeProduto, 0, 0, 0, 0)));
+
+            //Verificando se existe
+            if (produtoProcurado != null)
+                return produtoProcurado.Lista_de_Pedidos.ToString();
+            else
+                return string.Format("O produto {0} não foi encontrado.", nomeProduto);
         }
     }
 }

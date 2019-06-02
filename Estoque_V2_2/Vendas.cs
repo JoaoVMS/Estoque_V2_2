@@ -9,13 +9,13 @@ namespace Estoque_V2_2
     class Vendas : IDado
     {
         public int Cod_Pedido { get; set; }
-        public int Cod_Produto { get; set; }
+        public string Nome_Produto { get; set; }
         public int Qtd_Vendida { get; set; }
 
-        public Vendas(int Cod_Pedido, int Cod_Produto, int Qtd_Vendida)
+        public Vendas(int Cod_Pedido, string Nome_Produto, int Qtd_Vendida)
         {
             this.Cod_Pedido = Cod_Pedido;
-            this.Cod_Produto = Cod_Produto;
+            this.Nome_Produto = Nome_Produto;
             this.Qtd_Vendida = Qtd_Vendida;
         }
         public int CompareTo(object obj)
@@ -31,7 +31,7 @@ namespace Estoque_V2_2
         }
         public override string ToString()
         {
-            return "Cod_Pedido: " + Cod_Pedido + "; Cod_Produto: " + Cod_Produto + "; Qtd_Vendida: " + Qtd_Vendida; 
+            return "Cod_Pedido: " + Cod_Pedido + "; Cod_Produto: " + Nome_Produto + "; Qtd_Vendida: " + Qtd_Vendida; 
         }
         public void Inserir(IDado val) { }
     }
