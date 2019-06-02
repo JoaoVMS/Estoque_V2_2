@@ -11,6 +11,5 @@ namespace Estoque_V2_2
         string ToString();
         bool Equals(object obj);
         int CompareTo(object obj);
-        void Inserir(IDado val);
     }
 }

@@ -83,11 +83,6 @@ namespace Estoque_V2_2
 
             if (novo.meuDado.CompareTo(raiz.meuDado) < 0) //procura uma raiz nula na esquerda
                 raiz.esquerda = InserirRecursivo(novo, raiz.esquerda);
-            else if (novo.meuDado.CompareTo(raiz.meuDado) == 0) // adiciona uma venda a fila do produto
-            {
-                IDado venda = novo.meuDado;
-                raiz.meuDado.Inserir(venda);
-            }
             else
                 raiz.direita = InserirRecursivo(novo, raiz.direita); //procura uma raiz nula na direita
 
@@ -98,11 +93,11 @@ namespace Estoque_V2_2
             if (raiz == null)
                 return null;
 
-            if (busca.meuDado.CompareTo(raiz) == 0)                           
+            if (busca.meuDado.CompareTo(raiz.meuDado) == 0)                           
                 return raiz;
             
                 
-            else if (busca.meuDado.CompareTo(raiz) < 0)
+            else if (busca.meuDado.CompareTo(raiz.meuDado) < 0)
                 return BuscaRecursiva(busca, raiz.esquerda);
             else
                 return BuscaRecursiva(busca, raiz.direita);

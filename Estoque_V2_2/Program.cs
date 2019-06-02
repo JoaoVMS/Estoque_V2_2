@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace Estoque_V2_2
 {
@@ -14,11 +15,24 @@ namespace Estoque_V2_2
         static Arvore Arvore_de_Produtos;
         static void Main(string[] args)
         {
+            //Instanciando objetos
             Lista_Pedidos = new Lista();
             Lista_Produtos = new Lista[4]; // [0] Bebida, [1] Comida, [2] Escritorio, [3] Utensilios]
+            for (int pos = 0; pos < Lista_Produtos.Length; pos++)
+                Lista_Produtos[pos] = new Lista();
             Arvore_de_Produtos = new Arvore();
-            Ler_Dados_ARQ1();
 
+            //Leitura dos arquivos
+            Ler_Dados_ARQ1();
+            Ler_Dados_Vendas();
+            Console.WriteLine();
+
+            //Testar tempo
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
+            Console.WriteLine(hash_buscar(1));
+
+            Console.WriteLine(stopwatch.Elapsed.Seconds);
             Console.ReadKey();
         }
         static void Ler_Dados_ARQ1()
@@ -32,42 +46,39 @@ namespace Estoque_V2_2
             {
                 using (StreamReader entrada = new StreamReader(nome_Arquivo))
                 { //  nome_Produto, categoria, margem_Lucro, preco_Custo, estoque_Incial, minimo_Estoque
-                    string[] info = entrada.ReadLine().Split(';');
-
                     while (!entrada.EndOfStream)
                     {
-                        switch (info[2])
+                        string[] info = entrada.ReadLine().Split(';');
+                        switch (info[1])
                         {
                             case "1":
-                                novo = new Bebida(/*Convert.ToInt32(info[0])*/ info[1], Convert.ToDouble(info[3]), 
-                                    Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
-                               // Lista_Produtos[0].Inserir(novo);
-                                Arvore_de_Produtos.Inserir(novo);
+                                novo = new Bebida(info[0], Convert.ToDouble(info[2]), 
+                                    Convert.ToDouble(info[3]), Convert.ToInt32(info[4]), Convert.ToInt32(info[5]));
                                 break;
                             case "2":
-                                novo = new Comida(/*Convert.ToInt32(info[0]),*/ info[1], Convert.ToDouble(info[3]),
-                                    Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
-                               // Lista_Produtos[1].Inserir(novo);
-                                Arvore_de_Produtos.Inserir(novo);
+                                novo = new Comida(info[0], Convert.ToDouble(info[2]), 
+                                    Convert.ToDouble(info[3]), Convert.ToInt32(info[4]), Convert.ToInt32(info[5]));
                                 break;
                             case "3":
-                                novo = new Escritorio(/*Convert.ToInt32(info[0]),*/ info[1], Convert.ToDouble(info[3]),
-                                    Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
-                               // Lista_Produtos[2].Inserir(novo);
-                                Arvore_de_Produtos.Inserir(novo);
+                                novo = new Escritorio(info[0], Convert.ToDouble(info[2]),
+                                    Convert.ToDouble(info[3]), Convert.ToInt32(info[4]), Convert.ToInt32(info[5]));
                                 break;
                             case "4":
-                                novo = new Utensilio(/*Convert.ToInt32(info[0]),*/ info[1], Convert.ToDouble(info[3]),
-                                    Convert.ToDouble(info[4]), Convert.ToInt32(info[5]), Convert.ToInt32(info[6]));
-                               // Lista_Produtos[3].Inserir(novo);
-                                Arvore_de_Produtos.Inserir(novo);
+                                novo = new Utensilio(info[0], Convert.ToDouble(info[2]),
+                                    Convert.ToDouble(info[3]), Convert.ToInt32(info[4]), Convert.ToInt32(info[5]));
                                 break;
                             default:
+                                novo = null;
                                 break;
                         }
-
-                        int lugar_adequado = novo.GetHashCode();
-                        Lista_Produtos[lugar_adequado].Inserir(novo);
+                        if (novo!=null)
+                        {
+                            //Caso tenha sido instanciado corretamente, o produto será adicionado as estruturas de dados
+                            Arvore_de_Produtos.Inserir(novo);
+                            int lugar_adequado = novo.GetHashCode();
+                            Lista_Produtos[lugar_adequado].Inserir(novo);
+                        }
+                        
                     }
                 }
             }
@@ -178,7 +189,7 @@ namespace Estoque_V2_2
             }
         }
 
-        static void hash_buscar(int n)
+        static string hash_buscar(int n)
         {
             //***Colocar no main***
             //Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
@@ -205,7 +216,7 @@ namespace Estoque_V2_2
                     break;
             }
             int lugar = aux.GetHashCode();
-            Lista_Produtos[lugar].ToString();
+            return Lista_Produtos[lugar].ToString();
         }
 
 

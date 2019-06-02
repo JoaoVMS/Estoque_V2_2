@@ -31,8 +31,7 @@ namespace Estoque_V2_2
         }
         public override string ToString()
         {
-            return "Cod_Pedido: " + Cod_Pedido + "; Cod_Produto: " + Nome_Produto + "; Qtd_Vendida: " + Qtd_Vendida; 
+            return "Código do Pedido: " + Cod_Pedido + "; Nome do Produto: " + Nome_Produto + "; Quantidade Vendida: " + Qtd_Vendida; 
         }
-        public void Inserir(IDado val) { }
     }
 }

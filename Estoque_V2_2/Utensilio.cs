@@ -17,7 +17,7 @@ namespace Estoque_V2_2
         {
             return string.Format("Cód.: {0}; Nome: {1}; Categoria: Utensilio; Margem de Lucro: {2}%; " +
                 "\nPreço de Custo: {3}; Estoque Inicial: {4}; Minimo Estoque: {5}",
-                Cod_Produto, Nome_Produto, Margem_Lucro, Preco_Custo, Estoque_Inicial, Minimo_Estoque);
+                0, Nome_Produto, Margem_Lucro, Preco_Custo, Estoque_Inicial, Minimo_Estoque);
         }
         public override int GetHashCode()
         {
