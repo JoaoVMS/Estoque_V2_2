@@ -1,0 +1,400 @@
+Corretivo Anil;3;0,63;17,00;49;9
+Café Gaulês;2;0,68;10,00;34;9
+Paçoca Fogão de Minas;2;0,24;15,00;41;6
+Saleiro médio;4;0,37;58,00;50;8
+Hamburger Senhora;2;0,92;14,00;35;7
+Achocolatado 1 L;1;0,41;16,00;32;8
+Achocolatado 1,5 L;1;0,83;54,00;31;8
+Faca pequeno;4;0,94;18,00;43;6
+Achocolatado 3 L;1;0,20;5,00;39;7
+Água com gás 200 ml;1;0,83;1,00;46;9
+Azeitonas Pluma;2;0,96;81,00;33;5
+Água com gás 355 ml;1;0,06;78,00;48;5
+Guaraná Sibéria 500 ml;1;0,86;85,00;47;6
+Leite condensado Operário;2;0,62;98,00;36;6
+Paçoca Fogão de Minas;2;0,24;15,00;41;6
+Colher simples;4;0,52;72,00;56;7
+Copo lagoinha simples;4;0,61;10,00;54;9
+Achocolatado 500 ml;1;0,52;32,00;41;6
+Pão de queijo Prato Alegre;2;0,70;24,00;50;9
+Tubaína 200 ml;1;0,27;32,00;40;6
+Queijeira básico;4;0,94;17,00;30;6
+Chá mate 2 L;1;0,82;81,00;43;9
+Caneta Verde;3;0,01;95,00;43;6
+Leite condensado Gaulês;2;0,63;87,00;40;9
+Pão de queijo Operário;2;0,58;63,00;48;8
+Azeitonas Pluma;2;0,96;81,00;33;5
+Lapiseira Turquesa;3;1,00;68,00;55;9
+Corretivo Roxo;3;0,74;59,00;35;8
+Faca básico;4;0,99;31,00;40;6
+Achocolatado 1,5 L;1;0,83;54,00;31;8
+Chocolate Pregadão;2;0,11;97,00;33;9
+Borracha Vermelho;3;0,83;74,00;38;6
+Colher simples;4;0,52;72,00;56;7
+Colher luxo;4;0,37;49,00;45;5
+Água sem gás 2 L;1;0,84;1,00;31;9
+Desentupidor de fogão Azul;4;0,45;3,00;47;9
+Leite condensado Operário;2;0,62;98,00;36;6
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Borracha Vermelho;3;0,83;74,00;38;6
+Borracha Verde;3;0,54;80,00;37;9
+Azeitonas Fogão de Minas;2;0,57;56,00;51;5
+Pão de queijo Dois Corações;2;0,70;73,00;46;6
+Clipes Anil;3;0,21;68,00;58;5
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Guaraná Sibéria 500 ml;1;0,86;85,00;47;6
+Leite condensado Gaulês;2;0,63;87,00;40;9
+Corretivo Anil;3;0,63;17,00;49;9
+Chá mate 1,5 L;1;0,86;19,00;51;9
+Paçoca Fogão de Minas;2;0,24;15,00;41;6
+Grampeador Amarelo;3;0,47;82,00;43;8
+Café Fogão de Minas;2;0,53;37,00;40;6
+Clipes Anil;3;0,21;68,00;58;5
+Leite condensado Gaulês;2;0,63;87,00;40;9
+Hamburger Senhora;2;0,92;14,00;35;7
+Geleia Pregadão;2;0,14;68,00;47;7
+Tubaína 500 ml;1;0,80;33,00;47;6
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Papel A4 Marrom;3;0,62;22,00;38;7
+Corretivo Ciano;3;0,97;18,00;41;7
+Cola Cola 1,5 L;1;0,05;44,00;31;9
+Clipes Turquesa;3;0,75;60,00;44;9
+Azeitonas Pluma;2;0,96;81,00;33;5
+Peso de papel Turquesa;3;0,63;8,00;34;5
+Água de coco 1,5 L;1;0,03;88,00;58;6
+Borracha para panela de pressão luxo;4;0,93;88,00;56;5
+Garfo pequeno;4;0,78;71,00;52;6
+Paçoca Fogão de Minas;2;0,24;15,00;41;6
+Café Pregadão;2;0,31;94,00;52;5
+Grampeador Azul;3;0,09;71,00;35;9
+Café Fogão de Minas;2;0,53;37,00;40;6
+Papel A4 Marrom;3;0,62;22,00;38;7
+Peso de papel Turquesa;3;0,63;8,00;34;5
+Peso de papel Turquesa;3;0,63;8,00;34;5
+Café Fogão de Minas;2;0,53;37,00;40;6
+Queijeira grande;4;0,13;1,00;52;9
+Guaraná Sibéria 500 ml;1;0,86;85,00;47;6
+Água com gás 1 L;1;0,06;42,00;51;8
+Chocolate Senhora;2;0,52;96,00;30;7
+Achocolatado 355 ml;1;0,18;76,00;37;6
+Azeitonas Pluma;2;0,96;81,00;33;5
+Lapiseira Anil;3;0,14;59,00;42;9
+Cola Cola 1,5 L;1;0,05;44,00;31;9
+Azeitonas Senhora;2;0,15;88,00;35;6
+Clipes Laranja;3;0,29;28,00;42;7
+Copo lagoinha pequeno;4;0,96;29,00;47;5
+Hamburger Operário;2;0,76;37,00;42;6
+Lápis Ciano;3;0,22;93,00;35;8
+Borracha Vermelho;3;0,83;74,00;38;6
+Chocolate Dois Corações;2;0,59;91,00;57;5
+Lapiseira Anil;3;0,14;59,00;42;9
+Achocolatado 1,5 L;1;0,83;54,00;31;8
+Hamburger Senhora;2;0,92;14,00;35;7
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Peso de papel Vermelho;3;0,05;79,00;40;5
+Caneca básico;4;0,98;69,00;36;6
+Copo lagoinha pequeno;4;0,96;29,00;47;5
+Pão de queijo Operário;2;0,58;63,00;48;8
+Borracha Laranja;3;0,51;71,00;33;9
+Lápis Amarelo;3;0,32;65,00;57;8
+Saleiro pequeno;4;0,57;4,00;36;7
+Hamburger Senhora;2;0,92;14,00;35;7
+Chá mate 1,5 L;1;0,86;19,00;51;9
+Pão de alho Pregadão;2;0,20;9,00;34;8
+Chá mate 3 L;1;0,21;27,00;54;6
+Água com gás 200 ml;1;0,83;1,00;46;9
+Água com gás 1,5 L;1;0,23;2,00;40;6
+Chocolate Pregadão;2;0,11;97,00;33;9
+Grampeador Azul;3;0,09;71,00;35;9
+Chocolate Fogão de Minas;2;0,67;32,00;33;5
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Saleiro grande;4;0,29;49,00;49;7
+Leite condensado Via Láctea;2;0,22;88,00;43;7
+Grampeador Azul;3;0,09;71,00;35;9
+Chocolate Operário;2;0,94;88,00;58;6
+Grampeador Anil;3;0,16;78,00;57;6
+Faca básico;4;0,99;31,00;40;6
+Caneca básico;4;0,98;69,00;36;6
+Macarrão Fogão de Minas;2;0,98;19,00;34;8
+Caneca grande;4;0,55;67,00;42;8
+Pão de queijo Pregadão;2;0,82;25,00;36;8
+Clipes Anil;3;0,21;68,00;58;5
+Clipes Roxo;3;0,70;16,00;48;8
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Marca-texto Anil;3;0,15;58,00;43;6
+Saleiro médio;4;0,37;58,00;50;8
+Clipes Turquesa;3;0,75;60,00;44;9
+Pão de alho Pregadão;2;0,20;9,00;34;8
+Clipes Anil;3;0,21;68,00;58;5
+Hamburger Senhora;2;0,92;14,00;35;7
+Cola Cola 300 ml;1;0,49;98,00;34;8
+Cola Cola 355 ml;1;0,27;48,00;45;6
+Cola Cola 500 ml;1;0,67;28,00;35;7
+Grampeador Marrom;3;0,80;50,00;40;8
+Caneca básico;4;0,98;69,00;36;6
+Lápis Ciano;3;0,22;93,00;35;8
+Tubaína 355 ml;1;0,37;21,00;47;5
+Achocolatado 1 L;1;0,41;16,00;32;8
+Chocolate Senhora;2;0,52;96,00;30;7
+Grampeador Preto;3;0,16;65,00;34;5
+Desentupidor de fogão Azul;4;0,45;3,00;47;9
+Lapiseira Anil;3;0,14;59,00;42;9
+Achocolatado 200 ml;1;0,68;14,00;33;7
+Clipes Laranja;3;0,29;28,00;42;7
+Paçoca Só Dia;2;0,05;43,00;52;9
+Pão de alho Pregadão;2;0,20;9,00;34;8
+Paçoca Gaulês;2;0,73;98,00;36;8
+Grampeador Amarelo;3;0,47;82,00;43;8
+Marca-texto Rosa;3;0,16;44,00;58;9
+Pão de queijo Prato Alegre;2;0,70;24,00;50;9
+Copo plástico pequeno;4;0,74;49,00;34;5
+Hamburger Senhora;2;0,92;14,00;35;7
+Clipes Anil;3;0,21;68,00;58;5
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Peso de papel Roxo;3;0,25;90,00;50;6
+Clipes Laranja;3;0,29;28,00;42;7
+Corretivo Azul;3;0,50;96,00;58;6
+Copo plástico pequeno;4;0,74;49,00;34;5
+Lápis Vermelho;3;0,75;49,00;58;6
+Corretivo Azul;3;0,50;96,00;58;6
+Borracha Verde;3;0,54;80,00;37;9
+Café Dois Corações;2;0,31;58,00;30;9
+Corretivo Roxo;3;0,74;59,00;35;8
+Grampeador Verde;3;0,22;45,00;37;6
+Hamburger Gaulês;2;0,90;39,00;31;8
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Guaraná Sibéria 600 ml;1;0,55;56,00;49;5
+Cola Cola 1,5 L;1;0,05;44,00;31;9
+Desentupidor de fogão Azul;4;0,45;3,00;47;9
+Faca básico;4;0,99;31,00;40;6
+Azeitonas Senhora;2;0,15;88,00;35;6
+Tubaína 200 ml;1;0,27;32,00;40;6
+Hamburger Senhora;2;0,92;14,00;35;7
+Marca-texto Laranja;3;0,29;68,00;43;9
+Grampeador Azul;3;0,09;71,00;35;9
+Clipes Roxo;3;0,70;16,00;48;8
+Papel A4 Turquesa;3;0,09;21,00;44;6
+Paçoca Só Dia;2;0,05;43,00;52;9
+Desentupidor de fogão Turquesa;4;0,43;65,00;39;5
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Colher luxo;4;0,37;49,00;45;5
+Faca pequeno;4;0,94;18,00;43;6
+Achocolatado 1 L;1;0,41;16,00;32;8
+Pão de alho Só Dia;2;0,09;34,00;32;9
+Papel A4 Turquesa;3;0,09;21,00;44;6
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Pão de forma Pluma;2;0,58;16,00;31;7
+Geleia Dois Corações;2;0,36;43,00;55;7
+Garfo médio;4;0,94;24,00;53;7
+Paçoca Fogão de Minas;2;0,24;15,00;41;6
+Borracha Vermelho;3;0,83;74,00;38;6
+Lápis Azul;3;0,83;89,00;53;8
+Lápis Anil;3;0,18;55,00;49;9
+Geleia Dois Corações;2;0,36;43,00;55;7
+Saleiro grande;4;0,29;49,00;49;7
+Peso de papel Preto;3;0,01;97,00;32;6
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Lapiseira Laranja;3;0,29;28,00;47;6
+Hamburger Operário;2;0,76;37,00;42;6
+Pão de queijo Pregadão;2;0,82;25,00;36;8
+Geleia Pluma;2;0,40;38,00;34;5
+Café Operário;2;0,65;11,00;58;5
+Grampeador Azul;3;0,09;71,00;35;9
+Pão de queijo Dois Corações;2;0,70;73,00;46;6
+Borracha Vermelho;3;0,83;74,00;38;6
+Peso de papel Vermelho;3;0,05;79,00;40;5
+Queijeira grande;4;0,13;1,00;52;9
+Copo lagoinha médio;4;0,91;85,00;43;9
+Cola Cola 300 ml;1;0,49;98,00;34;8
+Geleia Pregadão;2;0,14;68,00;47;7
+Queijeira básico;4;0,94;17,00;30;6
+Água sem gás 3 L;1;0,91;24,00;57;9
+Borracha Cinza;3;0,36;52,00;51;6
+Hamburger Gaulês;2;0,90;39,00;31;8
+Lapiseira Laranja;3;0,29;28,00;47;6
+Saleiro grande;4;0,29;49,00;49;7
+Clipes Anil;3;0,21;68,00;58;5
+Guaraná Sibéria 200 ml;1;0,62;47,00;54;7
+Guaraná Sibéria 300 ml;1;0,80;15,00;55;6
+Clipes Turquesa;3;0,75;60,00;44;9
+Guaraná Sibéria 500 ml;1;0,86;85,00;47;6
+Guaraná Sibéria 200 ml;1;0,62;47,00;54;7
+Tubaína 500 ml;1;0,80;33,00;47;6
+Lápis Azul;3;0,83;89,00;53;8
+Corretivo Roxo;3;0,74;59,00;35;8
+Azeitonas Pluma;2;0,96;81,00;33;5
+Desentupidor de fogão Azul;4;0,45;3,00;47;9
+Saleiro médio;4;0,37;58,00;50;8
+Saleiro pequeno;4;0,57;4,00;36;7
+Tubaína 355 ml;1;0,37;21,00;47;5
+Achocolatado 200 ml;1;0,68;14,00;33;7
+Hamburger Senhora;2;0,92;14,00;35;7
+Colher simples;4;0,52;72,00;56;7
+Água sem gás 355 ml;1;0,56;98,00;49;5
+Água com gás 500 ml;1;0,26;77,00;38;8
+Queijeira grande;4;0,13;1,00;52;9
+Pão de queijo Prato Alegre;2;0,70;24,00;50;9
+Clipes Anil;3;0,21;68,00;58;5
+Guaraná Sibéria 200 ml;1;0,62;47,00;54;7
+Saleiro grande;4;0,29;49,00;49;7
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Chá mate 3 L;1;0,21;27,00;54;6
+Copo lagoinha simples;4;0,61;10,00;54;9
+Tubaína 355 ml;1;0,37;21,00;47;5
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Café Fogão de Minas;2;0,53;37,00;40;6
+Borracha Vermelho;3;0,83;74,00;38;6
+Pão de alho Senhora;2;0,77;57,00;47;5
+Paçoca Pregadão;2;0,75;65,00;41;7
+Pão de alho Senhora;2;0,77;57,00;47;5
+Queijeira grande;4;0,13;1,00;52;9
+Água sem gás 355 ml;1;0,56;98,00;49;5
+Lápis Ciano;3;0,22;93,00;35;8
+Pão de forma Pluma;2;0,58;16,00;31;7
+Água com gás 200 ml;1;0,83;1,00;46;9
+Achocolatado 500 ml;1;0,52;32,00;41;6
+Água com gás 1 L;1;0,06;42,00;51;8
+Paçoca Pregadão;2;0,75;65,00;41;7
+Achocolatado 1 L;1;0,41;16,00;32;8
+Achocolatado 500 ml;1;0,52;32,00;41;6
+Pão de queijo Dois Corações;2;0,70;73,00;46;6
+Paçoca Pluma;2;0,50;90,00;47;6
+Borracha Vermelho;3;0,83;74,00;38;6
+Achocolatado 355 ml;1;0,18;76,00;37;6
+Copo plástico básico;4;0,72;2,00;40;6
+Achocolatado 500 ml;1;0,52;32,00;41;6
+Grampeador Azul;3;0,09;71,00;35;9
+Achocolatado 1 L;1;0,41;16,00;32;8
+Lapiseira Turquesa;3;1,00;68,00;55;9
+Pão de queijo Operário;2;0,58;63,00;48;8
+Azeitonas Pluma;2;0,96;81,00;33;5
+Pão de forma Pluma;2;0,58;16,00;31;7
+Copo lagoinha pequeno;4;0,96;29,00;47;5
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Clipes Marrom;3;0,44;82,00;33;7
+Guaraná Sibéria 3 L;1;0,24;36,00;53;6
+Leite condensado Operário;2;0,62;98,00;36;6
+Leite condensado Gaulês;2;0,63;87,00;40;9
+Leite condensado Pluma;2;0,11;55,00;32;8
+Lapiseira Laranja;3;0,29;28,00;47;6
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Marca-texto Ciano;3;0,82;53,00;41;9
+Saleiro médio;4;0,37;58,00;50;8
+Lápis Anil;3;0,18;55,00;49;9
+Cola Cola 355 ml;1;0,27;48,00;45;6
+Grampeador Verde;3;0,22;45,00;37;6
+Tubaína 500 ml;1;0,80;33,00;47;6
+Grampeador Azul;3;0,09;71,00;35;9
+Geleia Pregadão;2;0,14;68,00;47;7
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Cola Cola 1,5 L;1;0,05;44,00;31;9
+Lapiseira Turquesa;3;1,00;68,00;55;9
+Geleia Pregadão;2;0,14;68,00;47;7
+Paçoca Pregadão;2;0,75;65,00;41;7
+Marca-texto Azul;3;0,75;1,00;40;7
+Água com gás 1 L;1;0,06;42,00;51;8
+Guaraná Sibéria 3 L;1;0,24;36,00;53;6
+Copo lagoinha simples;4;0,61;10,00;54;9
+Água com gás 500 ml;1;0,26;77,00;38;8
+Queijeira grande;4;0,13;1,00;52;9
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Pão de queijo Dois Corações;2;0,70;73,00;46;6
+Lapiseira Preto;3;0,22;64,00;52;5
+Café Operário;2;0,65;11,00;58;5
+Peso de papel Turquesa;3;0,63;8,00;34;5
+Marca-texto Anil;3;0,15;58,00;43;6
+Paçoca Dois Corações;2;0,92;76,00;58;6
+Paçoca Só Dia;2;0,05;43,00;52;9
+Saleiro pequeno;4;0,57;4,00;36;7
+Lápis Ciano;3;0,22;93,00;35;8
+Garfo pequeno;4;0,78;71,00;52;6
+Achocolatado 200 ml;1;0,68;14,00;33;7
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Peso de papel Turquesa;3;0,63;8,00;34;5
+Achocolatado 500 ml;1;0,52;32,00;41;6
+Cola Cola 300 ml;1;0,49;98,00;34;8
+Pão de forma Pluma;2;0,58;16,00;31;7
+Lápis Amarelo;3;0,32;65,00;57;8
+Tubaína 200 ml;1;0,27;32,00;40;6
+Água sem gás 355 ml;1;0,56;98,00;49;5
+Clipes Laranja;3;0,29;28,00;42;7
+Borracha Laranja;3;0,51;71,00;33;9
+Guaraná Sibéria 3 L;1;0,24;36,00;53;6
+Hamburger Senhora;2;0,92;14,00;35;7
+Caneca básico;4;0,98;69,00;36;6
+Pão de alho Via Láctea;2;0,70;81,00;59;7
+Copo lagoinha pequeno;4;0,96;29,00;47;5
+Marca-texto Ciano;3;0,82;53,00;41;9
+Guaraná Sibéria 600 ml;1;0,55;56,00;49;5
+Marca-texto Azul;3;0,75;1,00;40;7
+Água com gás 200 ml;1;0,83;1,00;46;9
+Copo plástico pequeno;4;0,74;49,00;34;5
+Geleia Dois Corações;2;0,36;43,00;55;7
+Marca-texto Anil;3;0,15;58,00;43;6
+Borracha Marrom;3;0,94;6,00;31;6
+Achocolatado 500 ml;1;0,52;32,00;41;6
+Pão de queijo Dois Corações;2;0,70;73,00;46;6
+Garfo pequeno;4;0,78;71,00;52;6
+Grampeador Azul;3;0,09;71,00;35;9
+Água com gás 500 ml;1;0,26;77,00;38;8
+Clipes Laranja;3;0,29;28,00;42;7
+Borracha Vermelho;3;0,83;74,00;38;6
+Colher simples;4;0,52;72,00;56;7
+Lápis Amarelo;3;0,32;65,00;57;8
+Peso de papel Roxo;3;0,25;90,00;50;6
+Pão de queijo Gaulês;2;0,92;21,00;56;5
+Pão de alho Senhora;2;0,77;57,00;47;5
+Água com gás 1 L;1;0,06;42,00;51;8
+Pão de queijo Operário;2;0,58;63,00;48;8
+Leite condensado Via Láctea;2;0,22;88,00;43;7
+Clipes Laranja;3;0,29;28,00;42;7
+Peso de papel Preto;3;0,01;97,00;32;6
+Achocolatado 1,5 L;1;0,83;54,00;31;8
+Achocolatado 200 ml;1;0,68;14,00;33;7
+Achocolatado 1,5 L;1;0,83;54,00;31;8
+Azeitonas Pregadão;2;0,24;93,00;59;8
+Geleia Dois Corações;2;0,36;43,00;55;7
+Caneca básico;4;0,98;69,00;36;6
+Pão de alho Senhora;2;0,77;57,00;47;5
+Achocolatado 1,5 L;1;0,83;54,00;31;8
+Cola Cola 1,5 L;1;0,05;44,00;31;9
+Marca-texto Laranja;3;0,29;68,00;43;9
+Pão de forma Pluma;2;0,58;16,00;31;7
+Corretivo Roxo;3;0,74;59,00;35;8
+Peso de papel Vermelho;3;0,05;79,00;40;5
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Peso de papel Preto;3;0,01;97,00;32;6
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Chocolate Dois Corações;2;0,59;91,00;57;5
+Garfo pequeno;4;0,78;71,00;52;6
+Geleia Dois Corações;2;0,36;43,00;55;7
+Corretivo Anil;3;0,63;17,00;49;9
+Peso de papel Cinza;3;0,53;98,00;47;6
+Pão de queijo Pregadão;2;0,82;25,00;36;8
+Pão de queijo Operário;2;0,58;63,00;48;8
+Café Gaulês;2;0,68;10,00;34;9
+Tubaína 200 ml;1;0,27;32,00;40;6
+Grampeador Azul;3;0,09;71,00;35;9
+Queijeira grande;4;0,13;1,00;52;9
+Pão de queijo Pregadão;2;0,82;25,00;36;8
+Queijeira básico;4;0,94;17,00;30;6
+Cola Cola 300 ml;1;0,49;98,00;34;8
+Caneta Roxo;3;0,89;63,00;49;9
+Cola Cola 1,5 L;1;0,05;44,00;31;9
+Saleiro médio;4;0,37;58,00;50;8
+Clipes Anil;3;0,21;68,00;58;5
+Paçoca Só Dia;2;0,05;43,00;52;9
+Azeitonas Fogão de Minas;2;0,57;56,00;51;5
+Azeitonas Só Dia;2;0,20;30,00;35;5
+Tubaína 200 ml;1;0,27;32,00;40;6
+Peso de papel Vermelho;3;0,05;79,00;40;5
+Tubaína 355 ml;1;0,37;21,00;47;5
+Faca pequeno;4;0,94;18,00;43;6
+Grampeador Verde;3;0,22;45,00;37;6
+Azeitonas Pluma;2;0,96;81,00;33;5
+Borracha Vermelho;3;0,83;74,00;38;6
+Borracha Cinza;3;0,36;52,00;51;6
+Lápis Amarelo;3;0,32;65,00;57;8
