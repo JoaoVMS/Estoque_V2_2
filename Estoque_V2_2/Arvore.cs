@@ -101,10 +101,10 @@ namespace Estoque_V2_2
             string result;
             try
             {
-                lines.Append("Valor bruto: " + _valorBruto(Raiz, 0));
-                lines.Append("\nValor liquido: " + _valorLiquido(Raiz, 0));
+                lines.Append("Valor faturado bruto: " + _faturamentoBruto(Raiz));
+                lines.Append("\nLucro liquido: " + _valorLiquido(Raiz));
                 lines.Append("\nProduto de maior faturamento: " + _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado).ToString());
-                lines.Append("\nFaturamento total: " + _faturamentoTotal(Raiz, 0));
+                lines.Append("\nFaturamento total: " + _lucroLiquido(Raiz));
                 result = lines.ToString();
             }
             catch (Exception e)
@@ -118,15 +118,15 @@ namespace Estoque_V2_2
         #region Getters
         public double ValorBruto
         {
-            get { return _valorBruto(Raiz, 0); }
+            get { return _faturamentoBruto(Raiz); }
         }
         public double ValorLiquido
         {
-            get { return _valorLiquido(Raiz, 0); }
+            get { return _valorLiquido(Raiz); }
         }
         public double FaturamentoTotal
         {
-            get { return _faturamentoTotal(Raiz, 0); }
+            get { return _lucroLiquido(Raiz); }
         }
         public Produto Produto_De_Maior_Faturmento
         {
@@ -164,50 +164,51 @@ namespace Estoque_V2_2
         /// <param name="root">Raiz da árvore</param>
         /// <param name="liquido">parametro auxiliar, use o valor 0</param>
         /// <returns>valor liquido total dos produtos</returns>
-        private double _valorLiquido(Nodo root, double liquido)
-        {
+        private double _valorLiquido(Nodo root)
+        {            
             if (root == null)
             {
                 return 0;
             }
-
+            double liquido = 0;
             var aux = (Produto)root.meuDado;
-            liquido += (aux.Preco_Custo + aux.LucroLiquido());
+            liquido = aux.Lista_de_Vendas.LucroLiquido();
 
-            liquido += _valorLiquido(root.esquerda, liquido);
-            liquido += _valorLiquido(root.direita, liquido);
+            liquido += _valorLiquido(root.esquerda);
+            liquido += _valorLiquido(root.direita);
 
             return liquido;
         }
         /// <summary>
-        /// Método recursivo para determinar o valor bruto total dos produtos
+        /// Método recursivo para determinar o valor faturado bruto da empresa
         /// </summary>
         /// <param name="root">Raiz da árvore</param>
         /// <param name="bruto">parametro auxiliar, use o valor 0</param>
         /// <returns>valor bruto total dos produtos</returns>
-        private double _valorBruto(Nodo root, double bruto)
-        {
+        private double _faturamentoBruto(Nodo root)
+        {            
             if (root == null)
             {
                 return 0;
             }
-
+            double bruto = 0;
             var aux = (Produto)root.meuDado;
-            bruto += (aux.Preco_Custo + aux.LucroLiquido() + aux.Imposto);
+            bruto = aux.Lista_de_Vendas.FaturamentoBruto();            
 
-            bruto += _valorBruto(root.esquerda, bruto);
-            bruto += _valorBruto(root.direita, bruto);
+            bruto += _faturamentoBruto(root.esquerda);
+            bruto += _faturamentoBruto(root.direita);
 
             return bruto;
         }
         /// <summary>
-        /// Método recursivo para determinar o faturamento total
+        /// Método recursivo para determinar o o lucro líquido da empresa
         /// </summary>
         /// <param name="root">Raiz da árvore</param>
         /// <param name="value">parametro auxiliar, use o valor 0</param>
         /// <returns>faturamento total</returns>
-        private double _faturamentoTotal(Nodo root, double value)
+        private double _lucroLiquido(Nodo root)
         {
+            double value = 0;
             if (root == null)
             {
                 return 0;
@@ -216,8 +217,8 @@ namespace Estoque_V2_2
             var aux = (Produto)root.meuDado;
             value += (aux.FaturamentoBruto());
 
-            value += _faturamentoTotal(root.esquerda, value);
-            value += _faturamentoTotal(root.direita, value);
+            value += _lucroLiquido(root.esquerda);
+            value += _lucroLiquido(root.direita);
 
             return value;
         }
@@ -231,8 +232,7 @@ namespace Estoque_V2_2
                 return null;
 
             if (busca.meuDado.CompareTo(raiz.meuDado) == 0)                           
-                return raiz;
-            
+                return raiz;            
                 
             else if (busca.meuDado.CompareTo(raiz.meuDado) < 0)
                 return BuscaRecursiva(busca, raiz.esquerda);

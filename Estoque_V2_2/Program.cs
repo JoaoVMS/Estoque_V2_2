@@ -30,9 +30,10 @@ namespace Estoque_V2_2
             //Testar tempo
             Stopwatch stopwatch = Stopwatch.StartNew();
 
-            Console.WriteLine(hash_buscar(1));
+            Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.
 
             Console.WriteLine(stopwatch.Elapsed.Seconds);
+            Pedidos_1Produto(); //mostrar todos os pedidos de um produto.
             Console.ReadKey();
         }
         static void Ler_Dados_ARQ1()
@@ -118,18 +119,18 @@ namespace Estoque_V2_2
                             //info[0] -> nome do produto
                             string nomeProduto = info[0];
                             //info[1] -> quantidade do produto vendido
-                            int quantidadeVendida = Convert.ToInt32(info[1]);
-
-                            //Criando objeto venda
-                            Vendas vendas = new Vendas(codigoVenda, nomeProduto, quantidadeVendida);
+                            int quantidadeVendida = Convert.ToInt32(info[1]);                            
 
                             //Buscando produto
                             Produto produto_procurado = new Produto(nomeProduto, 0, 0, 0, 0);
                             produto_procurado = (Produto)(Arvore_de_Produtos.Buscar(produto_procurado));
 
+                            //Criando objeto venda
+                            Vendas vendas = new Vendas(codigoVenda, nomeProduto, quantidadeVendida, produto_procurado.FaturamentoBruto(), produto_procurado.LucroLiquido());
+
                             //Inserindo produto
                             if (produto_procurado != null)  //verifica se produto existeS
-                                produto_procurado.Lista_de_Pedidos.Inserir(vendas);
+                                produto_procurado.Lista_de_Vendas.Inserir(vendas); //registrar vendas, compostas por um ou mais produtos, e o valor faturado.
                             else
                                 Console.WriteLine("Produto não foi encontrado.S");
                         }
@@ -138,57 +139,22 @@ namespace Estoque_V2_2
             }
 
             leituraVendas.Close();
-        }
+        }        
+        
+        //mostrar o produto de maior faturamento.
+        //mostrar todos os produtos de uma categoria
 
-        static void Ler_Dados_ARQ2()
+
+        static void Pedidos_1Produto()
         {
-            string nome_Arquivo = "AEDvendas.txt";
-            IDado novo;
+            Console.WriteLine("Digite o produto: ");
+            string produto = Console.ReadLine();
 
-            if (!File.Exists(nome_Arquivo))
-                Console.WriteLine("Arquivo {0} não existe!", nome_Arquivo);
-            else
-            {
-                using (StreamReader entrada = new StreamReader(nome_Arquivo))
-                { // cod_Pedido; Qtd_Produtos
-                    string[] info = entrada.ReadLine().Split(';');
-
-                    while (!entrada.EndOfStream)
-                    {
-                        novo = new Pedido(Convert.ToInt32(info[0]), Convert.ToInt32(info[1]));
-                        Lista_Pedidos.Inserir(novo);
-                    }
-                }
-            }
+            IDado prod = new Produto(produto);
+            prod = Arvore_de_Produtos.Buscar(prod);
+            Produto aux = (Produto)prod;
+            Console.WriteLine(aux.Lista_de_Vendas.CodPedidos());
         }
-        static void Ler_Dados_ARQ3()
-        {
-            string nome_Arquivo = "abc3.txt";
-            IDado novo;
-            string pedido;
-
-            if (!File.Exists(nome_Arquivo))
-                Console.WriteLine("Arquivo {0} não existe!", nome_Arquivo);
-            else
-            {
-                using (StreamReader entrada = new StreamReader(nome_Arquivo))
-                { // cod_Pedido; cod_Produto; Qtd_Vendida
-                    string[] info = entrada.ReadLine().Split(';');
-
-                    while (!entrada.EndOfStream)
-                    {
-                        pedido = info[0];
-
-                        while(info[0] == pedido)
-                        {
-                            novo = new Vendas(Convert.ToInt32(info[0]), info[1], Convert.ToInt32(info[2]));
-                            Arvore_de_Produtos.Inserir(novo);
-                        }
-                    }
-                }
-            }
-        }
-
         static string hash_buscar(int n)
         {
             //***Colocar no main***
@@ -227,7 +193,7 @@ namespace Estoque_V2_2
 
             //Verificando se existe
             if (produtoProcurado != null)
-                return produtoProcurado.Lista_de_Pedidos.ToString();
+                return produtoProcurado.Lista_de_Vendas.ToString();
             else
                 return string.Format("O produto {0} não foi encontrado.", nomeProduto);
         }

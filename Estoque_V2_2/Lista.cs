@@ -59,6 +59,50 @@ namespace Estoque_V2_2
 
             return auxImpressao.ToString();
         }
+        public double FaturamentoBruto()
+        {
+            double valor = 0;
+            Elemento atual = this.prim.prox;
+            while (atual != null)
+            {
+                Vendas aux = (Vendas)atual.meuDado;
+                valor += aux.Faturamento;
+                atual = atual.prox;
+            }
+
+            return valor;
+        }
+        public double LucroLiquido()
+        {
+            double valor = 0;
+            Elemento atual = this.prim.prox;
+            while (atual != null)
+            {
+                Vendas aux = (Vendas)atual.meuDado;
+                valor += aux.Liquido;
+                atual = atual.prox;
+            }
+
+            return valor;
+        }
+        public string CodPedidos()
+        {            
+            if (this.Vazia()) return "Categoria vazia";
+            int cont = 0;
+            StringBuilder auxImpressao = new StringBuilder();
+            Elemento atual = this.prim.prox;
+            Vendas aux = new Vendas();
+            while (atual != null)
+            {
+                aux = (Vendas)atual.meuDado;
+                auxImpressao.AppendLine(aux.Cod_Pedido.ToString());
+                atual = atual.prox;
+                cont++;
+            }
+
+            auxImpressao.AppendLine("O produto " + aux.Nome_Produto + " aparece em " + cont + " pedidos");
+            return auxImpressao.ToString();
+        }
         public bool Vazia()
         {
             return (prim == ult);
