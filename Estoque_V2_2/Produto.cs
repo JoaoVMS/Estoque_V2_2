@@ -15,7 +15,7 @@ namespace Estoque_V2_2
         public int Estoque_Inicial { get; set; }
         public int Minimo_Estoque { get; set; }
         public double Imposto { get; set; }
-        public Fila Fila_de_Pedidos { get; set; } // Fila de vendas?
+        public Lista Lista_de_Pedidos { get; set; } // Fila de vendas?
 
         public Produto(int Cod_Produto, string Nome_Produto, double Margem_Lucro, double Preco_Custo, int Estoque_Inicial, int Minimo_Estoque)
         {
@@ -26,7 +26,7 @@ namespace Estoque_V2_2
             this.Estoque_Inicial = Estoque_Inicial;
             this.Minimo_Estoque = Minimo_Estoque;
 
-            Fila_de_Pedidos = new Fila();
+            Lista_de_Pedidos = new Lista();
         }
         public bool Equals(Produto product)
         {
@@ -45,12 +45,12 @@ namespace Estoque_V2_2
         }
         public void Inserir( IDado pedido)
         {
-            Fila_de_Pedidos.Inserir(pedido);
+            Lista_de_Pedidos.Inserir(pedido);
         }
         public override string ToString()
         {
             StringBuilder auxString = new StringBuilder();
-            Elemento aux = Fila_de_Pedidos.prim.prox;
+            Elemento aux = Lista_de_Pedidos.prim.prox;
 
             auxString.AppendLine("Produto: " + Cod_Produto + "; Nome: " + Nome_Produto);
             auxString.AppendLine("Pedidos: ");
