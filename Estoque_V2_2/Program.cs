@@ -34,6 +34,9 @@ namespace Estoque_V2_2
 
             Console.WriteLine(stopwatch.Elapsed.Seconds);
             Pedidos_1Produto(); //mostrar todos os pedidos de um produto.
+            Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
+            int choice = int.Parse(Console.ReadLine());
+            Console.WriteLine(hash_buscar(choice));
             Console.ReadKey();
         }
         static void Ler_Dados_ARQ1()
@@ -156,12 +159,7 @@ namespace Estoque_V2_2
             Console.WriteLine(aux.Lista_de_Vendas.CodPedidos());
         }
         static string hash_buscar(int n)
-        {
-            //***Colocar no main***
-            //Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
-            //int choice = int.Parse(Console.ReadLine());
-            //hash_buscar(choice);
-
+        {                        
             IDado aux = null;
             switch(n)
             {
@@ -183,19 +181,6 @@ namespace Estoque_V2_2
             }
             int lugar = aux.GetHashCode();
             return Lista_Produtos[lugar].ToString();
-        }
-
-
-        static string mostrar_pedidos_produto(string nomeProduto)
-        {
-            //Fazendo busca
-            Produto produtoProcurado = (Produto)(Arvore_de_Produtos.Buscar(new Produto(nomeProduto, 0, 0, 0, 0)));
-
-            //Verificando se existe
-            if (produtoProcurado != null)
-                return produtoProcurado.Lista_de_Vendas.ToString();
-            else
-                return string.Format("O produto {0} não foi encontrado.", nomeProduto);
         }
     }
 }
