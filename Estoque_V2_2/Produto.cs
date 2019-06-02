@@ -17,7 +17,7 @@ namespace Estoque_V2_2
         public double Imposto { get; set; }
         public Lista Lista_de_Pedidos { get; set; } // Fila de vendas?
 
-        public Produto(int Cod_Produto, string Nome_Produto, double Margem_Lucro, double Preco_Custo, int Estoque_Inicial, int Minimo_Estoque)
+        public Produto(/*int Cod_Produto,*/ string Nome_Produto, double Margem_Lucro, double Preco_Custo, int Estoque_Inicial, int Minimo_Estoque)
         {
             this.Cod_Produto = Cod_Produto;
             this.Nome_Produto = Nome_Produto;
