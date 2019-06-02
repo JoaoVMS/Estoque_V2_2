@@ -18,9 +18,7 @@ namespace Estoque_V2_2
             Lista_Produtos = new Lista[4]; // [0] Bebida, [1] Comida, [2] Escritorio, [3] Utensilios]
             Arvore_de_Produtos = new Arvore();
             Ler_Dados_ARQ1();
-            //Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
-            //int choice = int.Parse(Console.ReadLine());
-            //hash_buscar(choice);
+            
             
 
 
@@ -128,7 +126,32 @@ namespace Estoque_V2_2
 
         static void hash_buscar(int n)
         {
-            Lista_Produtos[n].ToString();
+            //***Colocar no main***
+            //Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
+            //int choice = int.Parse(Console.ReadLine());
+            //hash_buscar(choice);
+
+            IDado aux = null;
+            switch(n)
+            {
+                case 0: //comida
+                    aux = new Comida(null, 0, 0, 0, 0);
+                    break;
+                case 1: //bebida
+                    aux = new Bebida(null, 0, 0, 0, 0);
+                    break;
+                case 2: //escritorio
+                    aux = new Escritorio(null, 0, 0, 0, 0);
+                    break;
+                case 3: //utensilios
+                    aux = new Utensilio(null, 0, 0, 0, 0);
+                    break;
+                default:
+                    Console.WriteLine("Opção não existe...");
+                    break;
+            }
+            int lugar = aux.GetHashCode();
+            Lista_Produtos[lugar].ToString();
         }
     }
 }
