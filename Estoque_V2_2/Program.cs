@@ -17,7 +17,12 @@ namespace Estoque_V2_2
             Lista_Pedidos = new Lista();
             Lista_Produtos = new Lista[4]; // [0] Bebida, [1] Comida, [2] Escritorio, [3] Utensilios]
             Arvore_de_Produtos = new Arvore();
+            Ler_Dados_ARQ1();
+            //Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
+            //int choice = int.Parse(Console.ReadLine());
+            //hash_buscar(choice);
             
+
 
             Console.ReadKey();
         }
@@ -119,6 +124,11 @@ namespace Estoque_V2_2
                     }
                 }
             }
+        }
+
+        static void hash_buscar(int n)
+        {
+            Lista_Produtos[n].ToString();
         }
     }
 }

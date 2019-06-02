@@ -45,6 +45,20 @@ namespace Estoque_V2_2
             return retirar.meuDado.ToString();
         }
 
+        public override string ToString()
+        {
+            if (this.Vazia()) return "Categoria vazia";
+
+            StringBuilder auxImpressao = new StringBuilder();
+            Elemento atual = this.prim.prox;
+            while (atual != null)
+            {
+                auxImpressao.AppendLine(atual.meuDado.ToString());
+                atual = atual.prox;
+            }
+
+            return auxImpressao.ToString();
+        }
         public bool Vazia()
         {
             return (prim == ult);
