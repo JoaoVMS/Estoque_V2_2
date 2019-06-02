@@ -67,10 +67,14 @@ namespace Estoque_V2_2
         {
             return base.GetHashCode();
         }
-        public double Calcular_Valor_Venda()
+        public double FaturamentoBruto()
         {
             double preco_Lucro = Preco_Custo + (Preco_Custo * Margem_Lucro);
             return preco_Lucro + (preco_Lucro * Imposto);
+        }
+        public double LucroLiquido()
+        {
+            return Preco_Custo * Margem_Lucro;
         }
     }
 }

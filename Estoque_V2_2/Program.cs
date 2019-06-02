@@ -170,7 +170,7 @@ namespace Estoque_V2_2
 
                         while(info[0] == pedido)
                         {
-                            novo = new Vendas(Convert.ToInt32(info[0]), Convert.ToInt32(info[1]), Convert.ToInt32(info[2]));
+                            novo = new Vendas(Convert.ToInt32(info[0]), info[1], Convert.ToInt32(info[2]));
                             Arvore_de_Produtos.Inserir(novo);
                         }
                     }
