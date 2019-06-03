@@ -13,6 +13,10 @@ namespace Estoque_V2_2
         {
             Imposto = 0.45;
         }
+        public Bebida(string nome_Produto) : base(nome_Produto)
+        {
+
+        }
         public override string ToString()
         {
             return string.Format("Cód.: {0}; Nome: {1}; Categoria: Bebida; Margem de Lucro: {2}%; " +

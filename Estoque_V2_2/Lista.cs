@@ -87,17 +87,17 @@ namespace Estoque_V2_2
         }
         public string CodPedidos()
         {            
-            if (this.Vazia()) return "Categoria vazia";
+            if (this.Vazia()) return "Produto não existe.";
             int cont = 0;
             StringBuilder auxImpressao = new StringBuilder();
             Elemento atual = this.prim.prox;
             Vendas aux = new Vendas();
-            while (atual != null)
+            while (atual != null) // percorre todas os elementos da lista
             {
                 aux = (Vendas)atual.meuDado;
-                auxImpressao.AppendLine(aux.Cod_Pedido.ToString());
+                auxImpressao.AppendLine(aux.Cod_Pedido.ToString()); // adiciona o cod do pedido
                 atual = atual.prox;
-                cont++;
+                cont++;// contador de pedidos
             }
 
             auxImpressao.AppendLine("O produto " + aux.Nome_Produto + " aparece em " + cont + " pedidos");

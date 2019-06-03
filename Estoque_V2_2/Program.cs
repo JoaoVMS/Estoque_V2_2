@@ -25,24 +25,59 @@ namespace Estoque_V2_2
             //Leitura dos arquivos
             Ler_Dados_ARQ1();
             Ler_Dados_Vendas();
-            Console.WriteLine();
 
-            //Testar tempo
+            bool rep = true;
+            while (rep)
+            {
+                switch (Menu())
+                {
+                    case 1:
+                        Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.
+                        break;
+                    case 2:
+                        Pedidos_1Produto(); //mostrar todos os pedidos de um produto.
+                        break;
+                    case 3:
+                        Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
+                        int choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine(hash_buscar(choice));
+                        break;
+                    case 4:
+                        rep = false;
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida...");
+                        break;
+                }
+            }
+            
             Stopwatch stopwatch = Stopwatch.StartNew();
-
-            Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.
-
-            Console.WriteLine(stopwatch.Elapsed.Seconds);
-            Pedidos_1Produto(); //mostrar todos os pedidos de um produto.
-            Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
-            int choice = int.Parse(Console.ReadLine());
-            Console.WriteLine(hash_buscar(choice));
+            Console.WriteLine(stopwatch.Elapsed.Seconds);            
             Console.ReadKey();
+        }
+        static int Menu()
+        {
+            try
+            {
+                Console.Clear();
+                Console.Write("\t\t==MENU==" +
+                "\n1. Registrar o valor faturado bruto e o lucro líquido da empresa até o momento;" +
+                "\n   Mostrar o produto de maior faturamento; " +
+                "\n2. Mostrar todos os pedidos de um produto;" +
+                "\n3. Mostrar todos os produtos de uma categoria;" +
+                "\n4. Sair." +
+                "\nOpção: ");
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
         static void Ler_Dados_ARQ1()
         {
             string nome_Arquivo = "AEDprodutos.txt";
-            IDado novo = null;            
+            IDado novo = null;
 
             if (!File.Exists(nome_Arquivo))
                 Console.WriteLine("Arquivo {0} não existe!", nome_Arquivo);
@@ -56,11 +91,11 @@ namespace Estoque_V2_2
                         switch (info[1])
                         {
                             case "1":
-                                novo = new Bebida(info[0], Convert.ToDouble(info[2]), 
+                                novo = new Bebida(info[0], Convert.ToDouble(info[2]),
                                     Convert.ToDouble(info[3]), Convert.ToInt32(info[4]), Convert.ToInt32(info[5]));
                                 break;
                             case "2":
-                                novo = new Comida(info[0], Convert.ToDouble(info[2]), 
+                                novo = new Comida(info[0], Convert.ToDouble(info[2]),
                                     Convert.ToDouble(info[3]), Convert.ToInt32(info[4]), Convert.ToInt32(info[5]));
                                 break;
                             case "3":
@@ -75,14 +110,14 @@ namespace Estoque_V2_2
                                 novo = null;
                                 break;
                         }
-                        if (novo!=null)
+                        if (novo != null)
                         {
                             //Caso tenha sido instanciado corretamente, o produto será adicionado as estruturas de dados
                             Arvore_de_Produtos.Inserir(novo);
                             int lugar_adequado = novo.GetHashCode();
                             Lista_Produtos[lugar_adequado].Inserir(novo);
                         }
-                        
+
                     }
                 }
             }
@@ -102,7 +137,7 @@ namespace Estoque_V2_2
             StreamReader leituraVendas = new StreamReader(nome_Arquivo);
 
             //Leitura do arquivo
-            while(!leituraVendas.EndOfStream)
+            while (!leituraVendas.EndOfStream)
             {
                 //leitura do codigo e do numero de produtos
                 string[] info = leituraVendas.ReadLine().Split(';');
@@ -113,7 +148,7 @@ namespace Estoque_V2_2
                     //info[1] -> numero de itens
                     int quantidade_Itens = Convert.ToInt32(info[1]);
 
-                    for(int pos = 0; pos < quantidade_Itens; pos++)
+                    for (int pos = 0; pos < quantidade_Itens; pos++)
                     {
                         //leitura itens
                         info = leituraVendas.ReadLine().Split(';');
@@ -122,7 +157,7 @@ namespace Estoque_V2_2
                             //info[0] -> nome do produto
                             string nomeProduto = info[0];
                             //info[1] -> quantidade do produto vendido
-                            int quantidadeVendida = Convert.ToInt32(info[1]);                            
+                            int quantidadeVendida = Convert.ToInt32(info[1]);
 
                             //Buscando produto
                             Produto produto_procurado = new Produto(nomeProduto, 0, 0, 0, 0);
@@ -142,38 +177,38 @@ namespace Estoque_V2_2
             }
 
             leituraVendas.Close();
-        }        
-        
+        }
+
         //mostrar o produto de maior faturamento.
         //mostrar todos os produtos de uma categoria
 
-          
+
         static void Pedidos_1Produto()
         {
-            Console.WriteLine("Digite o produto: ");
+            Console.Write("Digite o produto: ");
             string produto = Console.ReadLine();
 
             IDado prod = new Produto(produto);
-            prod = Arvore_de_Produtos.Buscar(prod);
+            prod = Arvore_de_Produtos.Buscar(prod); // busca o produto na arvore
             Produto aux = (Produto)prod;
-            Console.WriteLine(aux.Lista_de_Vendas.CodPedidos());
+            Console.WriteLine(aux.Lista_de_Vendas.CodPedidos()); // metodo que retorna os pedidos de um produto
         }
         static string hash_buscar(int n)
-        {                        
+        {
             IDado aux = null;
-            switch(n)
+            switch (n)
             {
                 case 0: //comida
-                    aux = new Bebida(null, 0, 0, 0, 0);
+                    aux = new Bebida(null);
                     break;
                 case 1: //bebida
-                    aux = new Comida(null, 0, 0, 0, 0);
+                    aux = new Comida(null);
                     break;
                 case 2: //escritorio
-                    aux = new Escritorio(null, 0, 0, 0, 0);
+                    aux = new Escritorio(null);
                     break;
                 case 3: //utensilios
-                    aux = new Utensilio(null, 0, 0, 0, 0);
+                    aux = new Utensilio(null);
                     break;
                 default:
                     Console.WriteLine("Opção não existe...");

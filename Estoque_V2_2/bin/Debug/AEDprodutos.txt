@@ -1,4 +1,4 @@
-Corretivo Anil;3;0,63;17,00;49;9
+﻿Corretivo Anil;3;0,63;17,00;49;9
 Café Gaulês;2;0,68;10,00;34;9
 Paçoca Fogão de Minas;2;0,24;15,00;41;6
 Saleiro médio;4;0,37;58,00;50;8
