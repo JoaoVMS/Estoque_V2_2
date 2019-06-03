@@ -147,7 +147,7 @@ namespace Estoque_V2_2
         //mostrar o produto de maior faturamento.
         //mostrar todos os produtos de uma categoria
 
-
+          
         static void Pedidos_1Produto()
         {
             Console.WriteLine("Digite o produto: ");
@@ -164,10 +164,10 @@ namespace Estoque_V2_2
             switch(n)
             {
                 case 0: //comida
-                    aux = new Comida(null, 0, 0, 0, 0);
+                    aux = new Bebida(null, 0, 0, 0, 0);
                     break;
                 case 1: //bebida
-                    aux = new Bebida(null, 0, 0, 0, 0);
+                    aux = new Comida(null, 0, 0, 0, 0);
                     break;
                 case 2: //escritorio
                     aux = new Escritorio(null, 0, 0, 0, 0);

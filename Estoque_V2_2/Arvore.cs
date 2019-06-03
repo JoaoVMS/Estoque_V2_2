@@ -22,18 +22,15 @@ namespace Estoque_V2_2
         }
         public IDado Buscar(IDado dado)
         {
-            //IDado dado = new Numero(chave); // = new (Tipo da classe) (chave);
+           
             Nodo busca = new Nodo(dado);
 
             return BuscaRecursiva(busca, Raiz).meuDado;
         }
         public IDado Retirar(IDado dado)
         {
-            //IDado dado = new Numero(chave);
             Nodo retirada = new Nodo(dado);
-
-            RetiradaRec(retirada, Raiz, out Nodo aux); //declaração dentro dos parametros do método
-
+            RetiradaRec(retirada, Raiz, out Nodo aux); 
             return aux.meuDado;
         }
 
