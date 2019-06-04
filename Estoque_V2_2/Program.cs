@@ -35,7 +35,7 @@ namespace Estoque_V2_2
                         Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.                        
                         break;
                     case 2:
-                        Console.WriteLine("falta implementar...");
+                        Console.WriteLine(Arvore_de_Produtos.Produto_De_Maior_Faturmento.ToString());
                         break;
                     case 3:
                         Console.Write("Digite o nome do produto: ");

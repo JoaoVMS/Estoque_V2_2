@@ -163,7 +163,6 @@ namespace Estoque_V2_2
         /// Método recursivo para determinar o valor liquido total dos produtos
         /// </summary>
         /// <param name="root">Raiz da árvore</param>
-        /// <param name="liquido">parametro auxiliar, use o valor 0</param>
         /// <returns>valor liquido total dos produtos</returns>
         private double _valorLiquido(Nodo root)
         {            
@@ -184,7 +183,6 @@ namespace Estoque_V2_2
         /// Método recursivo para determinar o valor faturado bruto da empresa
         /// </summary>
         /// <param name="root">Raiz da árvore</param>
-        /// <param name="bruto">parametro auxiliar, use o valor 0</param>
         /// <returns>valor bruto total dos produtos</returns>
         private double _faturamentoBruto(Nodo root)
         {            
@@ -205,7 +203,6 @@ namespace Estoque_V2_2
         /// Método recursivo para determinar o o lucro líquido da empresa
         /// </summary>
         /// <param name="root">Raiz da árvore</param>
-        /// <param name="value">parametro auxiliar, use o valor 0</param>
         /// <returns>faturamento total</returns>
         private double _lucroLiquido(Nodo root)
         {
