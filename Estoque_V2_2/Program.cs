@@ -32,15 +32,15 @@ namespace Estoque_V2_2
                 switch (Menu())
                 {
                     case 1:
-                        Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.
+                        Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.                        
                         break;
                     case 2:
-                        Pedidos_1Produto(); //mostrar todos os pedidos de um produto.
+                        Pedidos_1Produto(); //mostrar todos os pedidos de um produto.                        
                         break;
                     case 3:
                         Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
                         int choice = int.Parse(Console.ReadLine());
-                        Console.WriteLine(hash_buscar(choice));
+                        Console.WriteLine(hash_buscar(choice));                        
                         break;
                     case 4:
                         rep = false;
@@ -49,16 +49,13 @@ namespace Estoque_V2_2
                         Console.WriteLine("Opção inválida...");
                         break;
                 }
-            }
-            
-            Stopwatch stopwatch = Stopwatch.StartNew();
-            Console.WriteLine(stopwatch.Elapsed.Seconds);            
-            Console.ReadKey();
+                Console.ReadKey();
+            }         
         }
         static int Menu()
         {
             try
-            {
+            {                
                 Console.Clear();
                 Console.Write("\t\t==MENU==" +
                 "\n1. Registrar o valor faturado bruto e o lucro líquido da empresa até o momento;" +
