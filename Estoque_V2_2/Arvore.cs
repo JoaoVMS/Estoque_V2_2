@@ -24,8 +24,12 @@ namespace Estoque_V2_2
         {
            
             Nodo busca = new Nodo(dado);
+            busca = BuscaRecursiva(busca, Raiz);
 
-            return BuscaRecursiva(busca, Raiz).meuDado;
+            if (busca != null)
+                return busca.meuDado;
+            else
+                return null;
         }
         public IDado Retirar(IDado dado)
         {
