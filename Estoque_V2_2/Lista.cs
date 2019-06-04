@@ -95,7 +95,7 @@ namespace Estoque_V2_2
             while (atual != null) // percorre todas os elementos da lista
             {
                 aux = (Vendas)atual.meuDado;
-                auxImpressao.AppendLine(aux.Cod_Pedido.ToString()); // adiciona o cod do pedido
+                auxImpressao.AppendLine(aux.ToString()); // adiciona o cod do pedido
                 atual = atual.prox;
                 cont++;// contador de pedidos
             }

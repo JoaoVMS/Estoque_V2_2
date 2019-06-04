@@ -35,20 +35,26 @@ namespace Estoque_V2_2
                         Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.                        
                         break;
                     case 2:
-                        Pedidos_1Produto(); //mostrar todos os pedidos de um produto.                        
+                        Console.WriteLine("falta implementar...");
                         break;
                     case 3:
-                        Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
-                        int choice = int.Parse(Console.ReadLine());
-                        Console.WriteLine(hash_buscar(choice));                        
+                        Console.Write("Digite o nome do produto: ");
+                        string nomeProduto = Console.ReadLine();
+                        Console.WriteLine(mostrar_pedidos_produto(nomeProduto));
                         break;
                     case 4:
+                        Console.WriteLine("Digite a categoria a ser impressa: \n0. Bebida \n1. Comida \n2. Escritório \n3. Utensilios");
+                        int choice = int.Parse(Console.ReadLine());
+                        Console.WriteLine(hash_buscar(choice));
+                        break;
+                    case 5:
                         rep = false;
                         break;
                     default:
                         Console.WriteLine("Opção inválida...");
                         break;
                 }
+                Console.WriteLine("\n\nPressione qualquer tecla para continuar...");
                 Console.ReadKey();
             }         
         }
@@ -59,10 +65,10 @@ namespace Estoque_V2_2
                 Console.Clear();
                 Console.Write("\t\t==MENU==" +
                 "\n1. Registrar o valor faturado bruto e o lucro líquido da empresa até o momento;" +
-                "\n   Mostrar o produto de maior faturamento; " +
-                "\n2. Mostrar todos os pedidos de um produto;" +
-                "\n3. Mostrar todos os produtos de uma categoria;" +
-                "\n4. Sair." +
+                "\n2. Mostrar o produto de maior faturamento; " +
+                "\n3. Mostrar todos os pedidos de um produto;" +
+                "\n4. Mostrar todos os produtos de uma categoria;" +
+                "\n5. Sair." +
                 "\nOpção: ");
                 return Convert.ToInt32(Console.ReadLine());
             }
@@ -179,17 +185,18 @@ namespace Estoque_V2_2
         //mostrar o produto de maior faturamento.
         //mostrar todos os produtos de uma categoria
 
-
-        static void Pedidos_1Produto()
+        static string mostrar_pedidos_produto(string nomeProduto)
         {
-            Console.Write("Digite o produto: ");
-            string produto = Console.ReadLine();
+            //Fazendo busca
+            Produto produtoProcurado = (Produto)(Arvore_de_Produtos.Buscar(new Produto(nomeProduto)));
 
-            IDado prod = new Produto(produto);
-            prod = Arvore_de_Produtos.Buscar(prod); // busca o produto na arvore
-            Produto aux = (Produto)prod;
-            Console.WriteLine(aux.Lista_de_Vendas.CodPedidos()); // metodo que retorna os pedidos de um produto
+            //Verificando se existe
+            if (produtoProcurado != null)
+                return produtoProcurado.Lista_de_Vendas.CodPedidos();
+            else
+                return string.Format("O produto {0} não foi encontrado.", nomeProduto);
         }
+
         static string hash_buscar(int n)
         {
             IDado aux = null;
