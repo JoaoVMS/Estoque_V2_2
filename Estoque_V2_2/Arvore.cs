@@ -102,10 +102,10 @@ namespace Estoque_V2_2
             string result;
             try
             {
-                lines.Append("Valor faturado bruto: " + _faturamentoBruto(Raiz));
-                lines.Append("\nLucro liquido: " + _valorLiquido(Raiz));
+                lines.Append($"Valor faturado bruto: {_faturamentoBruto(Raiz):0.##}");
+                lines.Append($"\nLucro liquido: {_valorLiquido(Raiz):0.##}");
                 lines.Append("\nProduto de maior faturamento: " + _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado).ToString());
-                lines.Append("\nFaturamento total: " + _lucroLiquido(Raiz));
+                lines.Append($"\nFaturamento total: {_lucroLiquido(Raiz):0.##}");
                 result = lines.ToString();
             }
             catch (Exception e)
