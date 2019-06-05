@@ -154,7 +154,7 @@ namespace Estoque_V2_2
 
             var aux = (Produto)(root.meuDado);
 
-            if (aux.FaturamentoBruto() > produto.FaturamentoBruto())
+            if (aux.FaturamentoBrutoTotal > produto.FaturamentoBrutoTotal)
                 produto = aux;
 
             _produtoMaiorFat(root.esquerda, produto);
