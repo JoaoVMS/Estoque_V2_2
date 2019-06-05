@@ -65,7 +65,7 @@ namespace Estoque_V2_2
         {
             double preco_Lucro = Preco_Custo + (Preco_Custo * Margem_Lucro);
             return preco_Lucro + (preco_Lucro * Imposto);
-        }        
+        }
         public double LucroLiquido()
         {
             return Preco_Custo * Margem_Lucro;
