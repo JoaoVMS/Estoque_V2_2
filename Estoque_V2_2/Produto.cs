@@ -8,12 +8,14 @@ namespace Estoque_V2_2
 {
     class Produto : IDado
     {
-        public string Nome_Produto { get; private set; }           
+        public string Nome_Produto { get; private set; }
         public double Margem_Lucro { get; set; }
         public double Preco_Custo { get; set; }
         public int Estoque_Inicial { get; set; }
         public int Minimo_Estoque { get; set; }
         public double Imposto { get; set; }
+        public int NumeroDeVendas { get; set; }
+        public double FaturamentoBrutoTotal => (FaturamentoBruto() * NumeroDeVendas);
         public Lista Lista_de_Vendas { get; set; } // Fila de vendas?
 
         public Produto(string Nome_Produto, double Margem_Lucro, double Preco_Custo, int Estoque_Inicial, int Minimo_Estoque)
@@ -63,7 +65,7 @@ namespace Estoque_V2_2
         {
             double preco_Lucro = Preco_Custo + (Preco_Custo * Margem_Lucro);
             return preco_Lucro + (preco_Lucro * Imposto);
-        }
+        }        
         public double LucroLiquido()
         {
             return Preco_Custo * Margem_Lucro;

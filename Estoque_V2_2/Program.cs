@@ -171,7 +171,10 @@ namespace Estoque_V2_2
 
                             //Inserindo produto
                             if (produto_procurado != null)  //verifica se produto existeS
+                            {
                                 produto_procurado.Lista_de_Vendas.Inserir(vendas); //registrar vendas, compostas por um ou mais produtos, e o valor faturado.
+                                produto_procurado.NumeroDeVendas += vendas.Qtd_Vendida;
+                            }
                             else
                                 Console.WriteLine("Produto não foi encontrado.S");
                         }
