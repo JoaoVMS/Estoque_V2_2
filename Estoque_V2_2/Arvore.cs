@@ -96,16 +96,19 @@ namespace Estoque_V2_2
         /// Relatório contendo as seguintes informações: Valor liquido, valor bruto, produto de maior faturamento e faturamento total
         /// </summary>
         /// <returns></returns>
-        public string Relartorio()
+        public string Relatorio()
         {
             var lines = new StringBuilder();
             string result;
             try
             {
-                lines.Append($"Valor faturado bruto: {_faturamentoBruto(Raiz):0.##}");
-                lines.Append($"\nLucro liquido: {_valorLiquido(Raiz):0.##}");
+                string formatado = string.Format("{0:N}", _faturamentoBruto(Raiz), 2);
+                string formatado2 = string.Format("{0:N}", _valorLiquido(Raiz), 2);
+                string formatado3 = string.Format("{0:N}", _lucroLiquido(Raiz), 2);
+                lines.Append("Valor faturado bruto: R$ " + formatado); 
+                lines.Append("\nLucro liquido: R$ " + formatado2); 
                 lines.Append("\nProduto de maior faturamento: " + _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado).ToString());
-                lines.Append($"\nFaturamento total: {_lucroLiquido(Raiz):0.##}");
+                lines.Append("\nFaturamento total: R$ " + formatado3); 
                 result = lines.ToString();
             }
             catch (Exception e)
@@ -151,7 +154,7 @@ namespace Estoque_V2_2
 
             var aux = (Produto)(root.meuDado);
 
-            if (aux.FaturamentoBrutoTotal > produto.FaturamentoBrutoTotal)
+            if (aux.FaturamentoBruto() > produto.FaturamentoBruto())
                 produto = aux;
 
             _produtoMaiorFat(root.esquerda, produto);

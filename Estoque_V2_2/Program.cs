@@ -32,7 +32,7 @@ namespace Estoque_V2_2
                 switch (Menu())
                 {
                     case 1:
-                        Console.WriteLine(Arvore_de_Produtos.Relartorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.                        
+                        Console.WriteLine(Arvore_de_Produtos.Relatorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.                        
                         break;
                     case 2:
                         Console.WriteLine(Arvore_de_Produtos.Produto_De_Maior_Faturmento.ToString());
@@ -63,7 +63,10 @@ namespace Estoque_V2_2
             try
             {                
                 Console.Clear();
-                Console.Write("\t\t==MENU==" +
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("\t\t==MENU==");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(
                 "\n1. Registrar o valor faturado bruto e o lucro líquido da empresa até o momento;" +
                 "\n2. Mostrar o produto de maior faturamento; " +
                 "\n3. Mostrar todos os pedidos de um produto;" +
