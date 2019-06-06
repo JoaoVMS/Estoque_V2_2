@@ -130,11 +130,7 @@ namespace Estoque_V2_2
         public double FaturamentoTotal
         {
             get { return _lucroLiquido(Raiz); }
-        }
-        public Produto Produto_De_Maior_Faturmento
-        {
-            get { return _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado); }
-        }
+        }        
         #endregion
 
         #region Métodos Recursivos
