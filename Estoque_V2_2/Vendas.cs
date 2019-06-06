@@ -19,7 +19,7 @@ namespace Estoque_V2_2
             this.Cod_Pedido = Cod_Pedido;
             this.Nome_Produto = Nome_Produto;
             this.Qtd_Vendida = Qtd_Vendida;
-            this.Faturamento = Faturamento;
+            this.Faturamento = Faturamento * Qtd_Vendida;
             this.Liquido = Liquido;
         }
         public Vendas() { }

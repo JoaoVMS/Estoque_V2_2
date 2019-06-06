@@ -166,7 +166,7 @@ namespace Estoque_V2_2
                             int quantidadeVendida = Convert.ToInt32(info[1]);
 
                             //Buscando produto
-                            Produto produto_procurado = new Produto(nomeProduto, 0, 0, 0, 0);
+                            Produto produto_procurado = new Produto(nomeProduto);
                             produto_procurado = (Produto)(Arvore_de_Produtos.Buscar(produto_procurado));
 
                             //Criando objeto venda
@@ -176,7 +176,7 @@ namespace Estoque_V2_2
                             if (produto_procurado != null)  //verifica se produto existeS
                             {
                                 produto_procurado.Lista_de_Vendas.Inserir(vendas); //registrar vendas, compostas por um ou mais produtos, e o valor faturado.
-                                produto_procurado.NumeroDeVendas += vendas.Qtd_Vendida;
+                                produto_procurado.NumeroDeVendas += quantidadeVendida;
                             }
                             else
                                 Console.WriteLine("Produto não foi encontrado.S");
@@ -208,7 +208,7 @@ namespace Estoque_V2_2
                     aux = aux.prox;
                 }
             }
-            return (prodMFat.ToString());
+            return string.Format("{0}, Faturamento: R$ {1:N}", prodMFat.ToString(), prodMFat.FaturamentoBrutoTotal);
         }
 
         //mostrar todos os produtos de uma categoria

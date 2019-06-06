@@ -104,10 +104,10 @@ namespace Estoque_V2_2
             {
                 string formatado = string.Format("{0:N}", _faturamentoBruto(Raiz), 2);
                 string formatado2 = string.Format("{0:N}", _valorLiquido(Raiz), 2);
-                string formatado3 = string.Format("{0:N}", _lucroLiquido(Raiz), 2);
+                
                 lines.Append("Valor faturado bruto: R$ " + formatado); 
                 lines.Append("\nLucro liquido: R$ " + formatado2); 
-                lines.Append("\nFaturamento total: R$ " + formatado3); 
+                
                 result = lines.ToString();
             }
             catch (Exception e)
