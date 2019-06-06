@@ -107,7 +107,6 @@ namespace Estoque_V2_2
                 string formatado3 = string.Format("{0:N}", _lucroLiquido(Raiz), 2);
                 lines.Append("Valor faturado bruto: R$ " + formatado); 
                 lines.Append("\nLucro liquido: R$ " + formatado2); 
-                lines.Append("\nProduto de maior faturamento: " + _produtoMaiorFat(Raiz, (Produto)Raiz.meuDado).ToString());
                 lines.Append("\nFaturamento total: R$ " + formatado3); 
                 result = lines.ToString();
             }
@@ -139,29 +138,6 @@ namespace Estoque_V2_2
         #endregion
 
         #region Métodos Recursivos
-        /// <summary>
-        /// Método recursivo para encontrar na árvore o produto de maior faturamento
-        /// </summary>
-        /// <param name="root">Raiz da árvore</param>
-        /// <param name="produto">Produto auxiliar</param>
-        /// <returns>produto de maior faturamento</returns>
-        private Produto _produtoMaiorFat(Nodo root, Produto produto)
-        {
-            if (root == null)
-            {
-                return null;
-            }
-
-            var aux = (Produto)(root.meuDado);
-
-            if (aux.FaturamentoBrutoTotal > produto.FaturamentoBrutoTotal)
-                produto = aux;
-
-            _produtoMaiorFat(root.esquerda, produto);
-            _produtoMaiorFat(root.direita, produto);
-
-            return produto;
-        }
         /// <summary>
         /// Método recursivo para determinar o valor liquido total dos produtos
         /// </summary>

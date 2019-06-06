@@ -35,7 +35,7 @@ namespace Estoque_V2_2
                         Console.WriteLine(Arvore_de_Produtos.Relatorio());//registrar o valor faturado bruto e o lucro líquido da empresa até o momento.                        
                         break;
                     case 2:
-                        Console.WriteLine(Arvore_de_Produtos.Produto_De_Maior_Faturmento.ToString());
+                        Console.WriteLine(ProdutoMaiorFaturamento());
                         break;
                     case 3:
                         Console.Write("Digite o nome do produto: ");
@@ -189,6 +189,28 @@ namespace Estoque_V2_2
         }
 
         //mostrar o produto de maior faturamento.
+        static string ProdutoMaiorFaturamento()
+        {
+            double maiorFat = -1;
+            Produto prodMFat = new Produto("");
+
+            for (int i = 0; i < Lista_Produtos.Length; i++)
+            {
+                var aux = Lista_Produtos[i].prim.prox;
+                while (aux != null)
+                {
+                    var prodAux = (Produto)aux.meuDado;
+                    if (prodAux.FaturamentoBrutoTotal > maiorFat)
+                    {
+                        maiorFat = prodAux.FaturamentoBrutoTotal;
+                        prodMFat = prodAux;
+                    }
+                    aux = aux.prox;
+                }
+            }
+            return (prodMFat.ToString());
+        }
+
         //mostrar todos os produtos de uma categoria
 
         static string mostrar_pedidos_produto(string nomeProduto)
